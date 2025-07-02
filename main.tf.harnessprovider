@@ -1,0 +1,19 @@
+resource "harness_platform_workspace" "workspace_one" {
+  name                    = "Workspace One"
+  identifier              = "workspace_one"
+  org_id                  = "sandbox"
+  project_id              = "parson"
+  provisioner_type        = "terraform"
+  provisioner_version     = "1.5.6"
+  repository              = "https://github.com/danf425/test"
+  repository_branch       = "main"
+  repository_path         = "."
+  cost_estimation_enabled = true
+  provider_connector      = "account.HarnessAzure"
+  repository_connector    = "account.Github"
+  tags                    = ["parson"]
+}
+
+output "workspace_one" {
+  value = harness_platform_workspace.workspace_one.id
+}
