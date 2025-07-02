@@ -1,4 +1,4 @@
-# Azure VNet for Kroger IACM Demo
+# Azure VNet for IACM Demo
 
 This repo provisions a Virtual Network and Subnet in Azure using Terraform. It is not a module—this is standalone infrastructure for environment setup or demonstration purposes.
 
